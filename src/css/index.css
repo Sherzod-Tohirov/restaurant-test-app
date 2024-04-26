@@ -55,7 +55,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 32px;
+  padding: 10px 36px;
   border: 1px solid #ffffff6e;
   border-radius: 10px;
   color: #fff;
@@ -145,8 +145,7 @@ h2 {
 }
 
 .site-footer {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding: 80px 40px; 
   @apply bg-zinc-950;
 }
 
