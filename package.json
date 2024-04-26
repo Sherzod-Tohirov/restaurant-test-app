@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "jquery": "^3.7.1"
+  }
+}

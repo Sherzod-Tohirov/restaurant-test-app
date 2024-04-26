@@ -1,0 +1,252 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x: hidden;
+}
+
+h1,
+h2 {
+  font-family: "Courier New", Courier, monospace;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-sm bg-yellow-500;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-black;
+}
+
+::selection {
+  @apply bg-[#ffc72ed8] text-black;
+}
+
+.main-section {
+  background: rgba(0, 0, 0, 0.473) url("../images/1.jpg") no-repeat center;
+  background-size: cover;
+  background-blend-mode: darken;
+  background-attachment: fixed;
+}
+
+.hero {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.hero-title {
+  font-size: 72px;
+  font-family: "Courier New", Courier, monospace;
+  @apply text-yellow-50;
+}
+
+.container {
+  @apply mx-auto;
+  padding: 0 20px;
+}
+
+.contact-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 32px;
+  border: 1px solid #ffffff6e;
+  border-radius: 10px;
+  color: #fff;
+  background: transparent;
+  transition: all 0.2s linear;
+}
+
+.contact-btn::after {
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  width: 15px;
+  height: 15px;
+  background: url('../images/phone.svg') no-repeat center;
+  background-size: 15px;
+  transition: all 0.2s linear;
+  content: '';
+}
+
+.contact-btn:hover:after {
+  right: 10px;
+  opacity: 1;
+}
+
+.contact-btn:hover {
+  background-color: rgba(0, 0, 0, 0.473);
+}
+
+.services {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.services-title {
+  @apply text-yellow-50 text-center text-5xl;
+}
+
+.line {
+  @apply flex w-10 h-[2px] rounded-sm bg-yellow-400 animate-pulse;
+}
+
+.rounded-top {
+  @apply flex w-3 h-3 absolute top-[-5px] right-[-5px] bg-white rounded-full;
+}
+
+.ping {
+  @apply animate-ping;
+}
+
+.uniqueness {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: #090909b3 url("../images/2.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: darken;
+}
+
+.uniqueness-title {
+  @apply text-yellow-50 text-center text-5xl;
+}
+
+.uniqueness-item {
+  @apply flex items-center gap-6 max-w-[850px] w-full;
+}
+
+.uniqueness-item::before {
+  @apply flex items-center justify-center w-[65px] h-[65px] rounded-full p-5 text-[#fff] font-mono font-extralight text-[38px] bg-yellow-500 flex-shrink-0;
+  content: "";
+}
+
+.uniqueness-item:first-child:before {
+  content: "1";
+}
+
+.uniqueness-item:nth-child(2):before {
+  content: "2";
+}
+
+.uniqueness-item:nth-child(3):before {
+  content: "3";
+}
+
+.uniqueness-text {
+  font-family: "Courier New", Courier, monospace;
+  @apply text-yellow-50 text-start text-xl;
+}
+
+.site-footer {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @apply bg-zinc-950;
+}
+
+.service-text {
+  @apply text-xl text-white text-center;
+}
+
+.service-item {
+  perspective: 500px;
+  @apply flex flex-col items-center gap-3 max-w-[400px] w-full p-10 bg-[#000000e3] rounded-md border border-[#fff] overflow-hidden;
+  transition: all 0.2s linear;
+}
+
+.service-item:hover {
+  @apply bg-yellow-500 border-transparent cursor-pointer translate-y-[-4px] scale-95; 
+}
+
+.service-img {
+  transform-style: preserve-3d;
+  transition: all 0.2s ease;
+}
+
+.service-item:first-child:hover .service-img {
+  position: relative;
+  transform: translateX(15px);
+}
+
+.service-item:nth-child(2):hover .service-img {
+  transform: translateY(-15px);
+}
+
+.service-item:nth-child(3):hover .service-img {
+  transform: scale(1.15);
+}
+
+
+
+
+.booktable {
+  padding-top: 180px;
+  padding-bottom: 180px;
+  background: rgba(0, 0, 0, 0.473) url("../images/table.jpg") no-repeat center;
+  background-size: cover;
+  background-blend-mode: darken;
+  background-attachment: fixed;
+}
+
+.booktable-title {
+  font-size: 60px;
+  line-height: 120%;
+  letter-spacing: 0.8px;
+  text-align: center;
+  color: #fff;
+}
+
+.booktable-btn,
+.hero-btn {
+  position: relative;
+  width: 340px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  text-align: end;
+  font-size: 18px;
+  color: #fff;
+  border: 1px solid #fff;
+  transition: all 0.2s linear;
+  background-color: transparent;
+}
+
+.booktable-btn::after,
+.hero-btn::after {
+  position: absolute;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background: url('../images/booktable.svg') no-repeat center;
+  background-size: 30px;
+  transition: all 0.2s linear;
+  opacity: 0;
+  content: '';
+}
+
+.hero-btn::after {
+  width: 40px;
+  height: 40px;
+  background: url('../images/delivery.svg') no-repeat center;
+  background-size: 40px;
+}
+
+
+.booktable-btn:hover,
+.hero-btn:hover {
+  background-color: #ffffff50;
+}
+
+.booktable-btn:hover:after,
+.hero-btn:hover:after {
+  right: 55px;
+  opacity: 1;
+}
